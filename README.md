@@ -1,6 +1,6 @@
 # common
 
-[![RR0](https://circleci.com/gh/RR0/lang.svg?style=svg)](https://app.circleci.com/pipelines/github/RR0/lang)
+[![RR0](https://circleci.com/gh/RR0/common.svg?style=svg)](https://app.circleci.com/pipelines/github/RR0/common)
 
 Common and utility classes
 
