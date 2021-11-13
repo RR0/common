@@ -1,4 +1,4 @@
-import {ObjectUtils} from "./ObjectUtils";
+import {ObjectUtils} from "util/ObjectUtils";
 
 test('check undefined', () => {
   expect(ObjectUtils.isUndefined(undefined)).toBe(true)
