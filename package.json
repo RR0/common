@@ -1,10 +1,14 @@
 {
   "name": "@rr0/common",
+  "type": "module",
   "author": "Jérôme Beau",
   "version": "0.1.6",
   "description": "Common and utility classes",
-  "main": "dist/index.js",
+  "exports": "./index.js",
   "types": "dist/index.d.ts",
+  "engines": {
+    "node": "^12.20.0 || >=14.13.1"
+  },
   "license": "MIT",
   "homepage": "https://github.com/RR0/common",
   "repository": {
@@ -12,16 +16,16 @@
     "url": "git+https://github.com/RR0/common.git"
   },
   "scripts": {
-    "build": "parcel build src/index.ts --no-scope-hoist",
+    "build": "tsc",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
     "test": "jest"
   },
-  "dependencies": {},
   "devDependencies": {
-    "parcel": "2.0.0-beta.1",
+    "@parcel/transformer-typescript-types": "^2.0.1",
     "@types/jest": "^26.0.14",
     "jest": "^26.4.2",
+    "parcel": "2.0.1",
     "ts-jest": "^26.4.1",
     "typescript": "4.0.3"
   },
