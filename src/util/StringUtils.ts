@@ -1,4 +1,4 @@
-import {ObjectUtils} from "util/ObjectUtils";
+import {ObjectUtils} from "./ObjectUtils.js";
 
 export class StringUtils {
 
