@@ -23,6 +23,7 @@ npm install @rr0/common --save
 - `ObjectUtils.isDefined(val)` checks if `val` is strictly anything but `undefined`.
 - `ObjectUtils.isUnset(val)` checks if `val` is strictly `undefined` or `null`.
 - `ObjectUtils.isSet(val)` checks if `val` is strictly anything but `undefined` nor `null`.
+- `ObjectUtils.asSet(val, errMsg?)` returns val as defined. If it was not, an AssertionError(errMsg) will be thrown.
 
 ### String utilities
 - `StringUtils.toString(val)` returns a string representation of `val`, enclosed in quotes if `val` is a `string`.

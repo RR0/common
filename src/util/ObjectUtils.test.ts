@@ -27,3 +27,10 @@ test('check set', () => {
   expect(ObjectUtils.isSet('')).toBe(true)
   expect(ObjectUtils.isSet(0)).toBe(true)
 })
+
+test('asSet', () => {
+  expect(() => ObjectUtils.asSet(null, "This is not set")).toThrow("This is not set")
+  expect(ObjectUtils.asSet(12)).toBe(12)
+  expect(() => ObjectUtils.asSet(undefined)).toThrow("value is not set")
+  expect(() => ObjectUtils.asSet(null)).toThrow("value is not set")
+})

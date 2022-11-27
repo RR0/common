@@ -2,12 +2,12 @@
   "name": "@rr0/common",
   "type": "module",
   "author": "Jérôme Beau",
-  "version": "0.1.10",
+  "version": "1.0.1",
   "description": "Common and utility classes",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/RR0/common",
+  "homepage": "https://github.com/RR0/common#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RR0/common.git"
