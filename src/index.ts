@@ -1,3 +1,3 @@
-export * from "./user"
-export * from "./util"
-export {Gender} from "./Gender"
+export * from "./user/index.js"
+export * from "./util/index.js"
+export * from "./Gender.js"

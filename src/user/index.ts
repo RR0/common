@@ -1,1 +1,1 @@
-export * from "./UserPreferences"
+export * from "./UserPreferences.js"
