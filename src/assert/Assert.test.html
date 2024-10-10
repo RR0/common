@@ -1,12 +1,16 @@
 <script type="module">
-  import { assertInit } from "../../dist/index.js"
-  new Promise(async() => {
-    const assert = await assertInit()
+  import {Assert, RR0AssertionError} from "../../dist/index.js"
+
+  new Promise(async () => {
+    const assert = await Assert.getInstance()
     assert.ok(true)
     console.log("ok positive")
     try {
       assert.ok(false)
     } catch (e) {
+      if (!(e instanceof RR0AssertionError)) {
+        throw e
+      }
       console.log("ok negative")
     }
   })

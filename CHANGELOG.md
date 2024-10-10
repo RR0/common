@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.1] - To be released
+
+### Added
+
+- `Assert.ok(value)` works in both Node an browser. Initialize the singleton using assertInit()
+
 ## [1.0.1] - To be released
 
 ### Added

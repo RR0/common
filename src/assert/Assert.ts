@@ -1,8 +1,21 @@
-import { RR0AssertionError } from "./AssertionError.js"
+import { RR0AssertionError } from "./RR0AssertionError.js"
 
 export abstract class Assert {
 
-  protected abstract ok(something: any): void
+  abstract ok(something: any): void
+
+  static instance: Assert
+
+  /**
+   * Provide an Assert instance suited to the environment (browser or NodeJS)
+   */
+  static async getInstance(): Promise<Assert> {
+    if (!Assert.instance) {
+      Assert.instance = typeof process === "undefined" ? new BrowserAssert() : new NodeAssert(
+        await import("node:assert"))
+    }
+    return Assert.instance
+  }
 }
 
 export class BrowserAssert extends Assert {
@@ -25,10 +38,4 @@ export class NodeAssert extends Assert {
       throw new RR0AssertionError((e as Error).message)
     }
   }
-}
-
-export const assertInit = async () => {
-  return typeof process === "undefined" ?
-    new BrowserAssert()
-    : new NodeAssert(await import("node:assert"))
 }

@@ -1,11 +1,20 @@
 import { describe, test } from "@javarome/testscript"
-import { assertInit } from "./Assert.js"
+import { Assert } from "./Assert.js"
+import { RR0AssertionError } from "./RR0AssertionError.js"
 
-describe("Assert",async () => {
+describe("Assert", async () => {
 
-  const assert = await assertInit()
+  const assert = await Assert.getInstance()
 
   test("ok", () => {
     assert.ok(true)
+    try {
+      assert.ok(false)
+      throw new Error("Should not succeed")
+    } catch (e) {
+      if (!(e instanceof RR0AssertionError)) {
+        throw e
+      }
+    }
   })
 })
