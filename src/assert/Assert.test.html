@@ -1,0 +1,13 @@
+<script type="module">
+  import { assertInit } from "../../dist/index.js"
+  new Promise(async() => {
+    const assert = await assertInit()
+    assert.ok(true)
+    console.log("ok positive")
+    try {
+      assert.ok(false)
+    } catch (e) {
+      console.log("ok negative")
+    }
+  })
+</script>
