@@ -3,10 +3,10 @@
 
   new Promise(async () => {
     const assert = await Assert.getInstance()
-    assert.ok(true)
+    assert.ok(true, "true is not true")
     console.log("ok positive")
     try {
-      assert.ok(false)
+      assert.ok(false, "false is not true")
     } catch (e) {
       if (!(e instanceof RR0AssertionError)) {
         throw e

@@ -2,7 +2,7 @@ import { RR0AssertionError } from "./RR0AssertionError.js"
 
 export abstract class Assert {
 
-  abstract ok(something: any): void
+  abstract ok(something: any, message?: string): void
 
   static instance: Assert
 
@@ -20,8 +20,8 @@ export abstract class Assert {
 
 export class BrowserAssert extends Assert {
 
-  ok(something: any) {
-    console.assert(something)
+  ok(something: any, message = RR0AssertionError.defaultMessage) {
+    console.assert(something, message)
   }
 }
 
@@ -31,9 +31,9 @@ export class NodeAssert extends Assert {
     super()
   }
 
-  ok(something: any): void {
+  ok(something: any, message = RR0AssertionError.defaultMessage): void {
     try {
-      this.assert.ok(something)
+      this.assert.ok(something, message)
     } catch (e) {
       throw new RR0AssertionError((e as Error).message)
     }
