@@ -1,6 +1,5 @@
 .idea/**/*
 .circleci/*
-jest*.*
 *.test.*
 src/**/*
 *.html
