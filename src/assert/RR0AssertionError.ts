@@ -1,5 +1,4 @@
-import { RR0Error } from "../error"
-
+import { RR0Error } from "../error/index.js"
 
 export class RR0AssertionError extends RR0Error {
 
