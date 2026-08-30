@@ -19,15 +19,15 @@
     "clean": "rimraf ./dist && rimraf ./node_modules && rm package-lock.json",
     "prebuild": "npm install",
     "build": "tsc",
-    "test": "testscript",
+    "test": "vitest run",
     "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
+    "@types/node": "^22.8.1",
     "rimraf": "^6.0.1",
     "tsx": "^4.20.3",
-    "@javarome/testscript": "^0.13.1",
     "typescript": "5.9.2",
-    "@types/node": "^22.8.1"
+    "vitest": "^4.1.11"
   },
   "keywords": [
     "common",
