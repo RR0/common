@@ -1,5 +1,5 @@
 import { ObjectUtils } from "util/ObjectUtils.js"
-import { describe, expect, test } from "@javarome/testscript"
+import { describe, expect, test } from "vitest"
 
 describe("ObjectUtils", () => {
 

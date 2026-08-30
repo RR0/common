@@ -1,4 +1,4 @@
-import { describe, test } from "@javarome/testscript"
+import { describe, test } from "vitest"
 import { Assert } from "./Assert.js"
 import { RR0AssertionError } from "./RR0AssertionError.js"
 
